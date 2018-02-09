@@ -7,6 +7,7 @@ export default (state = initialState, action) => {
   switch (action.type) {
 
   case ADD_NEW_USER:
+  console.log('add new user')
       return state.concat(payload)
 
   default:

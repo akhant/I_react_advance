@@ -22,7 +22,7 @@ export class Users extends Component {
             })}
           </ul>
         </div>
-        <button onClick={this.handleUser}>add new user</button>
+        <button className="chat__users_btn" onClick={this.handleUser}>add new user</button>
       </div>
     )
   }

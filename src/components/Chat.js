@@ -5,11 +5,13 @@ import faker from "faker";
 import Messages from './Messages'
 import Users from './Users'
 
+
+
 export class Chat extends Component {
   
 
   render() {
-    const { users } = this.props;
+    
     return (
       <div className="chatBox">
         <div className="chatBox__header">
@@ -17,8 +19,8 @@ export class Chat extends Component {
            <hr />
         </div>
         <div className="chat">
-         <Messages />
-         <Users users={users}/>
+         <Messages messages={this.props.messages} />
+         <Users users={this.props.users}/>
           
         </div>
       </div>
@@ -26,11 +28,12 @@ export class Chat extends Component {
   }
 }
 
+
 export default connect(
   state => {
     return {
-      users: state.users
+      users: state.users,
+      messages: state.messages
     };
-  },
-  { addNewUser }
+  }
 )(Chat);
