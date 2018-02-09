@@ -18,11 +18,9 @@ export default (state = initialState, action) => {
   switch (action.type) {
 
     case ADD_MESSAGE:
-    console.log("ADD_MESSAGE")
-      return state.concat(payload)
+        return state.concat(payload)
 
     default:
-      console.log("state")
-      return state;
+        return state;
   }
 };

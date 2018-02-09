@@ -22,7 +22,7 @@ export class Messages extends Component {
     const date = Date.now();
     const rndUsername = faker.internet.userName();
     addMessage(date, rndUsername, this.state.text);
-    console.log("submit", this.props);
+    
   };
 
   render() {
