@@ -1,5 +1,16 @@
 import { ADD_NEW_USER, ADD_MESSAGE } from "../constants";
 
+export function addMessage(date, author, text) {
+  return {
+    type: ADD_MESSAGE,
+    payload: {
+      date: date,
+      author: author,
+      text: text
+    }
+  };
+}
+
 export const addNewUser = user => {
   return dispatch => {
     dispatch({
@@ -12,13 +23,4 @@ export const addNewUser = user => {
   };
 };
 
-export function addMessage(date, author, text) {
-  return {
-    type: ADD_MESSAGE,
-    payload: {
-      date: date,
-      author: author,
-      text: text
-    }
-  };
-}
+
