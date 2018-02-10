@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import MessagesList from "containers/MessagesList";
 import PeopleList from "containers/PeopleList";
+import hocAuth from '../containers/hocAuth'
 
 export class Chat extends Component {
   render() {
@@ -15,4 +16,4 @@ export class Chat extends Component {
   }
 }
 
-export default connect()(Chat);
+export default connect()(hocAuth(Chat));

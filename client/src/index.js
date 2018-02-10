@@ -5,6 +5,7 @@ import App from './components/App';
 import ws from './util/ws'
 
 window.ws = ws
+localStorage.removeItem("auth");
 
 const render = Component => {
   ReactDOM.render(

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Provider } from "react-redux";
 import store from "../store";
-import Chat from "containers/HocExample";
+import Chat from "components/Chat";
 import "../assets/styles/styles.scss";
 
 class App extends Component {
