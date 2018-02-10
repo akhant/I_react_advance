@@ -1,4 +1,4 @@
-import { CONNECTED_NEW_USER} from '../constants'
+import { CONNECTED_NEW_USER, DISCONNECTED_USER} from 'constants'
 
 
 
@@ -10,6 +10,12 @@ export default (state = [], action) => {
         return state.concat({userName: action.userName,
         id: action.userId
       })
+
+      case DISCONNECTED_USER:
+        return state.filter(user => {
+          return user.id !== action.userId
+        })
+  
 
   default:
     return state
