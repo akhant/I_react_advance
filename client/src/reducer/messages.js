@@ -1,4 +1,4 @@
-import { ADD_MESSAGE } from "constants";
+import { ADD_MESSAGE } from "../constants";
 
 const initialState = [
  

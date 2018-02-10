@@ -1,4 +1,4 @@
-import { ADD_NEW_USER, ADD_MESSAGE, CONNECTED_NEW_USER,DISCONNECTED_USER } from "constants";
+import { ADD_NEW_USER, ADD_MESSAGE, CONNECTED_NEW_USER } from "../constants";
 
 export function addMessage(date, author, text) {
   return {
@@ -28,12 +28,4 @@ export const connectedNewUser = (userName, userId) => ({
   userName,
   userId
 })
-
-
-export const disconnectedUser = (userName, userId) => ({
-  type: DISCONNECTED_USER,
-  userName,
-  userId
-})
-
 

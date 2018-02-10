@@ -59,12 +59,6 @@ module: {
         alias: {
             'components': path.resolve(__dirname, './src/components'),
             'containers': path.resolve(__dirname, './src/containers'),
-            'reducer': path.resolve(__dirname, './src/reducer'),
-            'AC': path.resolve(__dirname, './src/AC'),
-            'util': path.resolve(__dirname, './src/util'),
-            'store': path.resolve(__dirname, './src/store'),
-            'middlewares': path.resolve(__dirname, './src/middlewares'),
-            'constants': path.resolve(__dirname, './src/constants.js'),
         }
     },  
     plugins: [

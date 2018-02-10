@@ -1,6 +1,6 @@
-import { CONNECTED_NEW_USER, DISCONNECTED_USER } from "constants";
-import { connectedNewUser, disconnectedUser } from "AC";
-import store from "store";
+import { CONNECTED_NEW_USER } from "../constants";
+import { connectedNewUser } from "../AC";
+import store from "../store";
 
 export default (wsUrl => {
   let ws;
@@ -18,9 +18,6 @@ export default (wsUrl => {
     switch (messageObj.type) {
       case CONNECTED_NEW_USER:
         dispatch(connectedNewUser(userName, userId));
-        break;
-        case DISCONNECTED_USER:
-        dispatch(disconnectedUser(userName, userId));
         break;
     }
   };
