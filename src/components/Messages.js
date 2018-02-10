@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import faker from "faker";
 import { connect } from "react-redux";
 import {addMessage} from '../AC'

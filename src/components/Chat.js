@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addNewUser } from "../AC";
-import faker from "faker";
 import Messages from './Messages'
 import Users from './Users'
 
