@@ -1,3 +1,5 @@
+
+require("react-hot-loader/patch")
 const path = require('path') 
 const webpack = require('webpack')  
 const HtmlWebpackPlugin = require('html-webpack-plugin') 
@@ -6,6 +8,7 @@ const outputPath = path.resolve(__dirname, './dist')
 module.exports = {
     entry: {
         app: [
+            "react-hot-loader/patch",
             path.resolve(__dirname, './src/index.js')
         ]
     },
@@ -51,7 +54,13 @@ module: {
             use: 'url-loader?limit=10000&name=assets/[name]-[hash].[ext]'
         }
         ]
-    },
+    },    
+    resolve: {
+        alias: {
+            'components': path.resolve(__dirname, './src/components'),
+            'containers': path.resolve(__dirname, './src/containers'),
+        }
+    },  
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, './src/assets/index.html'),
@@ -68,5 +77,5 @@ module: {
         inline: true,
         hot: true,
         host: '0.0.0.0'
-    }   
+    }
 }

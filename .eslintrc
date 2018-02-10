@@ -1,8 +1,8 @@
 {
     "extends": [
         "eslint:recommended",
-        "plugin:import/errors",
-        "plugin:import/warnings"
+        /* "plugin:import/errors",
+        "plugin:import/warnings" */
     ],
     "parser": "babel-eslint",
     "env": {
@@ -19,12 +19,13 @@
     },
     "plugins": [
         "react",
-        "import"
+        /* "import" */
     ],
     "rules": {
         "no-debugger": 0,
         "no-console": 0,
         "strict": 0,
+        "no-unused-labels": 1,
         "no-underscore-dangle": 0,
         "no-use-before-define": 1,
         "no-undef": 1,

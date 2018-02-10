@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux'
 import messages from './messages'
-import users from './users'
+import people from './people'
 
 export default combineReducers({
-    users,
+    people,
     messages
 })
 
