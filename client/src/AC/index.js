@@ -1,4 +1,4 @@
-import { ADD_NEW_USER, ADD_MESSAGE } from "../constants";
+import { ADD_NEW_USER, ADD_MESSAGE, CONNECTED_NEW_USER } from "../constants";
 
 export function addMessage(date, author, text) {
   return {
@@ -23,4 +23,9 @@ export const addNewUser = user => {
   };
 };
 
+export const connectedNewUser = (userName, userId) => ({
+  type: CONNECTED_NEW_USER,
+  userName,
+  userId
+})
 

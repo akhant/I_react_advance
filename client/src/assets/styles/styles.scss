@@ -257,3 +257,21 @@ ul {
 	height: 0;
 }
 
+.noName {
+  background-color: #333;
+  width: 40%;
+  display: block;
+  text-align: center;
+  margin: 80px auto;
+}
+
+.noName h2 {
+  color: whitesmoke;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.noName button {
+  padding: 10px 20px;
+  margin-bottom: 30px;
+}
