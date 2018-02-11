@@ -1,15 +1,16 @@
 import { createStore,applyMiddleware } from 'redux'
-import reducer from '../reducer'
+import reducer from 'reducer'
 import thunk from 'redux-thunk'
 import logger from '../middlewares/logger'
+import sendMessage from '../middlewares/sendMessage'
 
-/* eslint-disable no-underscore-dangle */
+
   const store = createStore(
    reducer,
-   applyMiddleware(thunk, logger), /* preloadedState, */
-   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+   applyMiddleware(thunk, logger, sendMessage  )
   );
-/* eslint-enable */
+
 
 
 

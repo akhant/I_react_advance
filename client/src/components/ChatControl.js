@@ -1,21 +1,26 @@
 import React, { Component } from "react";
-import ws from "../util/ws";
+import { connect } from 'react-redux'
+import {sendMessage} from 'AC'
+import ws from 'util/ws'
 
 export class ChatControl extends Component {
   state = {
-    text: ""
+    text: ''
   };
 
   handleTextarea = e => {
+    
     this.setState({
       text: e.target.value
     });
-    console.log(this.state.text);
+    
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    ws.emit(this.state.text);
+    const {sendMessage} = this.props
+    sendMessage(this.state.text);
+    ws.emit(this.state.text)
   };
 
   render() {
@@ -39,4 +44,4 @@ export class ChatControl extends Component {
   }
 }
 
-export default ChatControl;
+export default connect(null, {sendMessage})(ChatControl);

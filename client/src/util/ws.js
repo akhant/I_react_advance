@@ -23,9 +23,8 @@ export default (wsUrl => {
         dispatch(disconnectedUser(userName, userId));
         break;
         case RECEIVE_NEW_MESSAGE:
-        dispatch(receiveNewMessage(data));
+        dispatch(receiveNewMessage(data, userId));
         break;
-        
     }
   };
 
