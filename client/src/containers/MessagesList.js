@@ -5,9 +5,18 @@ import MessageItem from "components/MessageItem";
 import ChatControl from "components/ChatControl";
 
 export class MessagesList extends Component {
-  state = {
-    text: ""
-  };
+  constructor(props) {
+    super(props)
+  
+    this.ul = ''
+    this.chatWrap = ''
+  }
+  
+  
+  componentDidUpdate = () => {
+    this.chatWrap.scrollTop = this.ul.scrollHeight
+  }
+  
 
   render() {
     const { messages } = this.props;
@@ -16,14 +25,14 @@ export class MessagesList extends Component {
       <div className="chat">
         <ChatHeader />
 
-        <div className="chat-history">
-          <ul>
+        <div className="chat-history" ref={chatWrap => this.chatWrap = chatWrap} >
+          <ul ref={ul => this.ul = ul} >
             {messages.map(message => {
               return <MessageItem key={message.time} message={message} />;
             })}
           </ul>
         </div>
-        <ChatControl />
+        <ChatControl messages={messages}/>
       </div>
     );
   }

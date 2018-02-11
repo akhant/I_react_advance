@@ -1,20 +1,17 @@
 import React, { Component } from "react";
-/* import { addNewUser } from "../AC"; */
 import { connect } from "react-redux";
-import UserItem from 'components/UserItem'
-import PeopleSearch from 'components/PeopleSearch'
+import UserItem from "components/UserItem";
+import PeopleSearch from "components/PeopleSearch";
 
 export class PeopleList extends Component {
   render() {
-    const {people} = this.props
+    const { people } = this.props;
     return (
       <div className="people-list" id="people-list">
-         <PeopleSearch /> 
+        <PeopleSearch />
         <ul className="list">
           {people.map(user => {
-            return (
-             <UserItem key={user.id} user={user} />
-            );
+            return <UserItem key={user.id} user={user} />;
           })}
         </ul>
       </div>
@@ -23,5 +20,5 @@ export class PeopleList extends Component {
 }
 
 export default connect(state => {
-  return {people: state.people}
+  return { people: state.people };
 })(PeopleList);

@@ -3,9 +3,8 @@ import { ADD_MESSAGE, RECEIVE_NEW_MESSAGE } from "constants";
 const initialState = [];
 
 export default (state = initialState, action) => {
-  
   const { payload, data } = action;
-  console.log("receive message", data)
+
   switch (action.type) {
     case ADD_MESSAGE:
       return state.concat(payload);

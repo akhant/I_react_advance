@@ -25,6 +25,7 @@ export default (wsUrl => {
         case RECEIVE_NEW_MESSAGE:
         dispatch(receiveNewMessage(data));
         break;
+        
     }
   };
 
