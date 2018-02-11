@@ -1,17 +1,24 @@
-import { ADD_MESSAGE } from "constants";
+import { ADD_MESSAGE, RECEIVE_NEW_MESSAGE } from "constants";
 
-const initialState = [
- 
-];
+const initialState = [];
 
 export default (state = initialState, action) => {
-  const { payload} = action
+  
+  const { payload, data } = action;
+  console.log("receive message", data)
   switch (action.type) {
-
     case ADD_MESSAGE:
-        return state.concat(payload)
+      return state.concat(payload);
+
+    case RECEIVE_NEW_MESSAGE:
+      return state.concat({
+        time: data.time,
+        author: data.author,
+        text: data.text,
+        color: data.color
+      });
 
     default:
-        return state;
+      return state;
   }
 };

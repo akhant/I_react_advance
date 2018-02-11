@@ -1,5 +1,5 @@
-import { CONNECTED_NEW_USER, DISCONNECTED_USER } from "constants";
-import { connectedNewUser, disconnectedUser } from "AC";
+import { CONNECTED_NEW_USER, DISCONNECTED_USER,RECEIVE_NEW_MESSAGE } from "constants";
+import { connectedNewUser, disconnectedUser, receiveNewMessage } from "AC";
 import store from "store";
 
 export default (wsUrl => {
@@ -13,7 +13,7 @@ export default (wsUrl => {
 
   ws.onmessage = message => {
     const messageObj = JSON.parse(message.data);
-    const { userName, userId } = messageObj;
+    const { userName, userId, data } = messageObj;
     console.log("ws message: ", messageObj);
     switch (messageObj.type) {
       case CONNECTED_NEW_USER:
@@ -21,6 +21,9 @@ export default (wsUrl => {
         break;
         case DISCONNECTED_USER:
         dispatch(disconnectedUser(userName, userId));
+        break;
+        case RECEIVE_NEW_MESSAGE:
+        dispatch(receiveNewMessage(data));
         break;
     }
   };
