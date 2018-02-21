@@ -4,3 +4,9 @@ server/node_modules
 .vscode
 client/.vscode
 server/.vscode
+.vscode
+client/.vscode
+server/.vscode
+node_modules
+client/node_modules
+server/node_modules
