@@ -1,0 +1,43 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add cuncurently
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_144\bin;C:\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;E:\S\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin;C:\Users\Антон\scoop\shims;C:\Users\Антон\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Heroku\bin;C:\Users\Антон\AppData\Local\GitHubDesktop\bin;C:\Users\Антон\AppData\Roaming\Composer\vendor\bin;C:\Program Files\wget;C:\Users\Антон\AppData\Roaming\npm;C:\Users\Антон\AppData\Local\Yarn\bin;C:\Program Files\Microsoft VS Code\bin
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  8.9.4
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "I_react_advance",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "start:client": "cd client && npm run dev",
+      "start:server": "cd server && node app.js",
+    },
+    "repository": "https://github.com/akhant/I_react_advance.git",
+    "author": "akhant <a.khantelev@mail.ru>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  SyntaxError: E:\GitHub\I_react_advance\package.json: Unexpected token } in JSON at position 188
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:770:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:92:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:103:13
+      at <anonymous>
